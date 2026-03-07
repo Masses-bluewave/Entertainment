@@ -12,6 +12,7 @@ const loadAsset = (type, url) => {
     }
     el.onload = resolve;
     el.onerror = reject;
+    document.body.style.display = "block";
     document.head.appendChild(el);
   });
 };
