@@ -36,7 +36,8 @@ body {
 /*nav*/
 .navbar {
   margin: 20px auto;
-  /* Rounded pill shape */
+  width: 95%;
+  border-radius: 50px; /* Rounded pill shape */
   background: rgba(255, 255, 255, 0.15); /* Semi-transparent */
   backdrop-filter: blur(12px); /* The "Glass" effect */
   -webkit-backdrop-filter: blur(12px);
@@ -45,7 +46,6 @@ body {
   transition: all 0.3s ease;
 
     @media (width > 992px) {
-        
     }
 }
 
