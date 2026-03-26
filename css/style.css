@@ -114,6 +114,7 @@ body {
     height: 2rem;
     width: 10rem;
     position: relative;
+    z-index: 3;
 
      @media (width < 992px) {
        width: 100%;
