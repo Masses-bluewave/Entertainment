@@ -169,16 +169,7 @@ body {
 }
 
 /* Futuristic Background Glow */
-.interactive-glow {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 0;
-    background: radial-gradient(circle at center, rgba(112, 0, 255, 0.15) 0%, transparent 50%);
-    transition: background 0.2s ease-out;
-}
+
 
 /* Glassmorphism Card */
 .hero-content {
