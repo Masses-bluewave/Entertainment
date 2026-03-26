@@ -107,7 +107,7 @@ body {
 
 
 .navbar-toggler{
-    z-index: 15;
+    z-index: 150;
 }
 
 .offcanvas .d-flex {
