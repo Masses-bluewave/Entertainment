@@ -34,7 +34,107 @@ body {
 }
 
 /*nav*/
+.navbar {
+  margin: 20px auto;
+  width: 95%;
+  border-radius: 50px; /* Rounded pill shape */
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent */
+  backdrop-filter: blur(12px); /* The "Glass" effect */
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  transition: all 0.3s ease;
+}
 
+.navbar-brand {
+    font-size: clamp(1.5rem);
+    font-weight: 700;
+    color: #333 !important;
+    text-shadow: var(--textshadowh1);
+}
+
+.offcanvas {
+    text-align: center;
+    @media (width < 992px) {
+        background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+    }
+}
+
+.offcanvas-body {
+    align-items: center;  
+    
+}
+
+.navbar-nav {
+@media (width < 992px) {
+       gap: 2rem;
+    }
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 5px;
+  left: 50%;
+  background-color: #0d6efd; /* Bootstrap primary color or your brand color */
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 70%; /* Line grows on hover */
+}
+
+
+.navbar-nav .nav-link{
+  color: #333 !important;
+  font-weight: 500;
+  padding: 0.5rem 1.2rem !important;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: #007bff;
+    text-shadow: var(--textshadowh1);
+}
+
+.navbar-nav .nav-link:hover{
+  text-shadow: var(--textshadowh1);
+}
+
+
+.navbar-toggler{
+    z-index: 150;
+}
+
+.offcanvas .d-flex {
+    height: 2rem;
+    width: 10rem;
+    position: relative;
+    z-index: 3;
+
+     @media (width < 992px) {
+       width: 100%;
+    }
+}
+
+.offcanvas .d-flex span {
+    position: absolute;
+    right: 0rem;
+    margin: 3px;
+    color: aliceblue;
+}
+
+.offcanvas .form-control {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 40px;
+}
 
 
 /* Hero Section */
