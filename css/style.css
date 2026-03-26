@@ -34,10 +34,28 @@ body {
 }
 
 /*nav*/
+.navbar {
+ 
+}
 
+.navbar-brand {
+    font-size: clamp(1.5rem);
+    font-weight: 700;
+    color: #333 !important;
+    text-shadow: var(--textshadowh1);
+}
 
+.offcanvas {
+    text-align: center;
+    @media (width < 992px) {
+        background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+    }
+}
 
-
+.offcanvas-body {
+    align-items: center;  
+    
+}
 
 .navbar-nav {
 @media (width < 992px) {
@@ -84,7 +102,31 @@ body {
     z-index: 150;
 }
 
+.offcanvas .d-flex {
+    height: 2rem;
+    width: 10rem;
+    position: relative;
+    z-index: 3;
 
+     @media (width < 992px) {
+       width: 100%;
+    }
+}
+
+.offcanvas .d-flex span {
+    position: absolute;
+    right: 0rem;
+    margin: 3px;
+    color: aliceblue;
+}
+
+.offcanvas .form-control {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 40px;
+}
 
 
 /* Hero Section */
@@ -119,7 +161,16 @@ body {
 }
 
 /* Futuristic Background Glow */
-
+.interactive-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background: radial-gradient(circle at center, rgba(112, 0, 255, 0.15) 0%, transparent 50%);
+    transition: background 0.2s ease-out;
+}
 
 /* Glassmorphism Card */
 .hero-content {

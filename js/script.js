@@ -45,6 +45,23 @@ const swiper2 = new Swiper(".swiper-2", {
     },
     });
 
+     const glow = document.getElementById('glow');
+
+window.addEventListener('mousemove', (e) => {
+    // Calculate mouse position as a percentage of the screen
+    const x = (e.clientX / window.innerWidth) * 100;
+    const y = (e.clientY / window.innerHeight) * 100;
+
+    // Update the radial gradient position
+    glow.style.background = `
+        radial-gradient(
+            circle at ${x}% ${y}%, 
+            rgba(255, 0, 122, 0.15) 0%, 
+            rgba(112, 0, 255, 0.1) 25%, 
+            transparent 60%
+        )
+    `;
+});
 
 // Optional: Add a slight "breathing" animation to the card
 const card = document.querySelector('.glass-card');
