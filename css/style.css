@@ -55,6 +55,7 @@ body {
 
 .offcanvas {
     text-align: center;
+    z-index: 100;
     @media (width < 992px) {
         background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
     }
