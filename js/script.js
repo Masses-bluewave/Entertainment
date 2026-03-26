@@ -76,6 +76,19 @@ function animate() {
 
 animate();
 
+const myOffcanvas = document.getElementById('offcanvasNavbar');
+// Get the navbar element to modify
+const navbar = document.querySelector('.navbar');
+
+// When offcanvas is shown
+myOffcanvas.addEventListener('shown.bs.offcanvas', () => {
+  navbar.classList.remove('navbar'); // Remove class
+});
+
+// When offcanvas is hidden
+myOffcanvas.addEventListener('hidden.bs.offcanvas', () => {
+  navbar.classList.add('navbar'); // Re-add class
+});
 
 }).catch(err => console.error("Asset failed to load", err));
 
