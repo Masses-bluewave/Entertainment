@@ -33,7 +33,7 @@ const swiper1 = new Swiper('.swiper-1', {
    effect: 'cube',
    grabCursor: true,
    slidesPerView: "auto", // Allows for the continuous flow of elements
-   speed: 7000, // Adjust the speed of the animation (higher value = slower speed)
+   speed: 1000, // Adjust the speed of the animation (higher value = slower speed)
    loop: true, // Essential for continuous looping
    freeMode: true, // Allows for free-flowing, non-snapping movement
    
@@ -45,37 +45,29 @@ const swiper1 = new Swiper('.swiper-1', {
     },
     
     autoplay: {
-      delay: 0, // No delay between transitions
+      delay: 5000,
       disableOnInteraction: false, // Autoplay continues even after user interaction
     },
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
 
 });
 
 const swiper2 = new Swiper(".swiper-2", {
-      slidesPerView: 3, // Show 3 slides at a time
-      CenteredSlides: true,
-      speed: 7000, // Adjust the speed of the animation (higher value = slower speed)
-   loop: true, // Essential for continuous looping
-   freeMode: true,
-      spaceBetween: 30,
-      freeMode: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      initialSlide: 2,
+      loop: true, // Essential for continuous looping
+      slidesPerView: "2.3", // Allows for the continuous flow of elements
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 250,
+        modifier: 2.5,
+        slideShadows: true,
       },
 
       autoplay: {
-      delay: 2000, // No delay between transitions
+      delay: 5000, // No delay between transitions
       disableOnInteraction: false, // Autoplay continues even after user interaction
     },
     });
@@ -96,11 +88,17 @@ const swiper2 = new Swiper(".swiper-2", {
   <nav class="navbar navbar-expand-lg py-0">
   <div class="container-fluid">
     <a class="navbar-brand" href="../index.html">Masses</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mb-lg-0">
+
+    <div class="offcanvas justify-content-between offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+       <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Masses</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+      <ul class="navbar-nav mx-auto flex-grow-0 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
@@ -119,6 +117,7 @@ const swiper2 = new Swiper(".swiper-2", {
         <input class="form-control" type="search" placeholder="Search" aria-label="Search"/>
         <span class="material-symbols-outlined" onclick="document.getElementById('myForm').submit()">search</span>
       </form>
+      </div>
 
     </div>
   </div>
