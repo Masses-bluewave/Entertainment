@@ -54,12 +54,17 @@ body {
     font-weight: 700;
     color: #333 !important;
     text-shadow: var(--textshadowh1);
+    position: relative;
+    z-index: 2000;
 }
 
 .offcanvas {
     text-align: center;
+    
     @media (width < 992px) {
         background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+        width: 100%;
+        top: 0;
     }
 }
 
@@ -110,7 +115,7 @@ body {
 
 
 .navbar-toggler{
-    z-index: 150;
+    z-index: 10;
 }
 
 .offcanvas .d-flex {
@@ -137,6 +142,27 @@ body {
     backdrop-filter: blur(15px);
     border: 1px solid rgb(255, 255, 255);
     border-radius: 40px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-close {
+  display: inline-block;
+  /* Apply animation continuously */
+  animation: spin 2s linear infinite;
+  /* Optional: pause on hover */
+  transition: transform 0.3s ease;
+}
+
+.btn-close:hover {
+  animation-play-state: paused;
 }
 
 
